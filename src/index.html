@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+  <meta name="description"
+    content="Discover Sankalp Kumar, a Creative Developer and Computer Science student at KIIT University. Explore his portfolio showcasing innovative web development projects with React, Three.js, and GSAP." />
+  <meta name="author" content="Sankalp Kumar">
+  <meta name="keywords" content="Sankalp Kumar, Creative Developer, Web Developer, React, Three.js, Portfolio, GSAP">
+  <meta property="og:site_name" content="Sankalp Kumar - Creative Developer">
+  <meta property="og:locale" content="fr_FR">
+
+  <title>Sankalp Kumar - Creative Developer</title>
+  <link rel="icon" type="image/x-icon" href="/cross.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet"> -->
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    // Prevent browser zoom
+    document.addEventListener('gesturestart', function(e) {
+      e.preventDefault();
+    });
+
+    // Prevent pinch zoom
+    document.addEventListener('touchmove', function(e) {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, false);
+
+    // Disable double-tap zoom
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function(e) {
+      let now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+
+    // Ensure viewport is set correctly
+    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    }
+  </script>
+  <script type="module" src="/main.jsx"></script>
+</body>
+
+</html>
