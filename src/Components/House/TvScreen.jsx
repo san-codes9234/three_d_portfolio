@@ -89,7 +89,7 @@ export default function TvScreen(props) {
       <mesh
         position={[0.42, 2.35, -3.48]}
         scale={[0.22, 0.32, 0.1]}
-        onClick={() => handleClick("https://drive.google.com/file/d/15dm1FOSiisapKgmS8t1o2c6aPQUvd0TI/view?usp=sharing")}
+        onClick={() => handleClick("https://drive.google.com/file/d/1fhVIh5x8IzAtv30d84aT-75mQ1T4Tnm3/view?usp=sharing")}
       >
         <planeGeometry />
         <meshBasicMaterial map={cvTexture} transparent />
